@@ -1,0 +1,12 @@
+function [ L ] = getLagrangian( positions, velocities, massMatrix, g, ySelect )
+%GETLAGRANGIAN Returns the Lagrangian of the system with the given
+%position and velocity functions. The mass matrix is a diagon
+%   Detailed explanation goes here
+
+T = .5 * (sqrt(massMatrix) * velocities)' * (sqrt(massMatrix) * velocities);
+U = -g * ySelect' * massMatrix * positions;
+
+L = T - U;
+
+end
+
