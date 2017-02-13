@@ -8,8 +8,8 @@ cla % Clear axes
 
 plot(ropeX, ropeY); % Plot the rope
 
-ax.YLim = [-10,10];
-ax.XLim = [-10,10];
+ax.YLim = [-30,30];
+ax.XLim = [-30,30];
 
 
 end

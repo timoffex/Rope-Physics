@@ -1,4 +1,4 @@
-function [eqn, thetaDD] = solveEulerLagrange( L, theta, thetaD, t )
+function [S, thetaDD] = solveEulerLagrange( L, theta, thetaD, t )
 %SOLVEEULERLAGRANGE Solves the Euler-Lagrange equation for the second
 %derivative of theta.
 %   L is in terms of theta, thetaD and time, and theta/thetaD are just
@@ -19,7 +19,7 @@ L_theta = subs(subs(L_theta, theta, fTheta), thetaD, fThetaD);
 L_thetaD = subs(subs(L_thetaD, theta, fTheta), thetaD, fThetaD);
 
 
-eqn = L_theta == diff(L_thetaD, t) + thetaD;
+S = L_theta - diff(L_thetaD, t);
 
 thetaDD = sym('thetaDD', size(theta));
 
@@ -28,9 +28,9 @@ thetaDD = sym('thetaDD', size(theta));
 for i = 1:length(theta),
     f = fTheta(i);
     
-    eqn = subs(eqn, diff(f, t, t), thetaDD(i));
-    eqn = subs(eqn, diff(f, t), thetaD(i));
-    eqn = subs(eqn, f, theta(i));
+    S = subs(S, diff(f, t, t), thetaDD(i));
+    S = subs(S, diff(f, t), thetaD(i));
+    S = subs(S, f, theta(i));
 end
 
 

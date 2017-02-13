@@ -10,7 +10,7 @@ theta = sym('theta', [numRopeSegments, 1]);
 thetaD = sym('thetaD', [numRopeSegments, 1]);
 
 initTheta = zeros(size(theta));
-initThetaD = zeros(size(thetaD));
+initThetaD = zeros
 
 assume(theta, 'real');
 assume(thetaD, 'real');
