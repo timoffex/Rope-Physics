@@ -1,5 +1,5 @@
 # Rope-Physics
-A program to simulate the physics of a rope dfasdfby solving for its equations of motion.
+A program to simulate the physics of a rope by solving for its equations of motion.
 
 To run the example, type `runExample` in the Matlab console.
 
