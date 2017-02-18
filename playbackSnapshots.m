@@ -1,4 +1,4 @@
 
 
 playbackSnapshotsCompute
-playbackSnapshotsXY
+playbackSnapshotsRender

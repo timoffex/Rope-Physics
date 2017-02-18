@@ -1,4 +1,4 @@
-function updateRopeGraphic( ropeX, ropeY )
+function updateRopeGraphic( ropeX, ropeY, totalLength )
 %UPDATEROPEGRAPHIC Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -8,8 +8,9 @@ cla % Clear axes
 
 plot(ropeX, ropeY); % Plot the rope
 
-ax.YLim = [-30,30];
-ax.XLim = [-30,30];
+
+ax.YLim = [-totalLength,totalLength];
+ax.XLim = [-totalLength,totalLength];
 
 
 end

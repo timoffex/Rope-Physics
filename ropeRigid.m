@@ -30,6 +30,6 @@ velocity = diffVV(position, theta) * thetaD;
 
 
 T = .5 * (velocity') * velocity;
-U = (1:2*numRopeSegments > numRopeSegments) * position;
+U = 9.8 * (1:2*numRopeSegments > numRopeSegments) * position;
 
 L = T - U;
